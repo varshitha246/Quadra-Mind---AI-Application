@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="speech-recognition">
+    <h2>Speech Recognition 🗣</h2>
+    <form method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="audio">Upload audio file (WAV, MP3, OGG):</label>
+            <input type="file" id="audio" name="audio" accept=".wav,.mp3,.ogg" required>
+            <small class="form-text text-muted">Maximum file size: 50MB</small>
+        </div>
+        <button type="submit" class="btn">Transcribe</button>
+    </form>
+    
+    {% if error %}
+    <div class="alert alert-danger mt-3">
+        {{ error }}
+    </div>
+    {% endif %}
+    
+    {% if transcript %}
+    <div class="result mt-4">
+        <h3>Transcript:</h3>
+        <div class="transcript-output p-3 bg-light rounded">
+            <p>{{ transcript }}</p>
+        </div>
+        
+        {% if audio_file %}
+        <div class="audio-player mt-3">
+            <h4>Original Audio:</h4>
+            <audio controls class="w-100">
+                <source src="{{ url_for('static', filename='uploads/audio/' + audio_file) }}" type="audio/{{ audio_file.split('.')[-1] }}">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        {% endif %}
+    </div>
+    {% endif %}
+</section>
+{% endblock %}

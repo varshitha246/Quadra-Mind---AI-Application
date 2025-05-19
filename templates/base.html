@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MindMatrix: The 4-Task AI Lab</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    {# You could also define a title block here for more flexibility #}
+    {# <title>{% block title %}MindMatrix AI Lab{% endblock %}</title> #}
+</head>
+<body>
+    <header>
+        <h1>AI TetraCognition</h1>
+        <nav>
+            <ul>
+                <li><a href="{{ url_for('index') }}">Home</a></li>
+                <li><a href="{{ url_for('summarization') }}">Text Summarization</a></li>
+                <li><a href="{{ url_for('speech_recognition') }}">Speech Recognition</a></li>
+                <li><a href="{{ url_for('style_transfer') }}">Neural Style Transfer</a></li>
+                <li><a href="{{ url_for('text_generation') }}">Text Generation</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        {# This is where the unique content of each page template will be inserted #}
+        {% block content %}{% endblock %}
+    </main>
+
+    {# The common footer, included on all pages extending base.html #}
+    <footer>
+        <p>© 2025 AI QuadraMind Project</p>
+    </footer>
+
+    {# Common script file, included on all pages #}
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

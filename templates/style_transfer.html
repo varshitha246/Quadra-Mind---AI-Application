@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="style-transfer">
+    <h2>Neural Style Transfer 🎨</h2>
+    <form method="POST" enctype="multipart/form-data">
+        <div class="form-group">
+            <label for="content">Content Image:</label>
+            <input type="file" id="content" name="content" accept=".jpg,.jpeg,.png" required>
+        </div>
+        <div class="form-group">
+            <label for="style">Style Image:</label>
+            <input type="file" id="style" name="style" accept=".jpg,.jpeg,.png" required>
+        </div>
+        <button type="submit" class="btn">Apply Style</button>
+    </form>
+
+    {# Check if output_image variable is passed (meaning transfer was successful) #}
+    {% if output_image %}
+    <div class="result">
+        <h3>Result:</h3>
+        <div class="image-grid">
+            <div class="image-container">
+                <h4>Content Image</h4>
+                {# Use the content_image path directly with url_for('static', ...) #}
+                <img src="{{ url_for('static', filename=content_image) }}" alt="Content Image">
+            </div>
+            <div class="image-container">
+                <h4>Style Image</h4>
+                 {# Use the style_image path directly with url_for('static', ...) #}
+                <img src="{{ url_for('static', filename=style_image) }}" alt="Style Image">
+            </div>
+            <div class="image-container">
+                <h4>Styled Image</h4>
+                {# FIX: Pass the output_image path directly to url_for('static', filename=...) #}
+                {# The output_image variable already contains the path relative to the static folder #}
+                <img src="{{ url_for('static', filename=output_image) }}" alt="Styled Image">
+                {# Download link also uses the correct path #}
+                <a href="{{ url_for('static', filename=output_image) }}" download class="btn download-btn">Download</a>
+            </div>
+        </div>
+    </div>
+    {% endif %}
+
+    {# Display error message if one exists #}
+    {% if error %}
+        <p class="error-message">{{ error }}</p>
+    {% endif %}
+
+</section>
+{% endblock %}

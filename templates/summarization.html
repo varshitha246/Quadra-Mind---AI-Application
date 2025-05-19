@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="summarization">
+    <h2>Text Summarization 🧠</h2>
+    <form method="POST">
+        <div class="form-group">
+            <label for="text">Enter your text to summarize:</label>
+            <textarea id="text" name="text" rows="15" required>{% if original_text %}{{ original_text }}{% endif %}</textarea>
+        </div>
+        <button type="submit" class="btn">Summarize</button>
+    </form>
+    
+    {% if summary %}
+    <div class="result">
+        <h3>Summary:</h3>
+        <div class="summary-output">
+            {{ summary }}
+        </div>
+    </div>
+    {% endif %}
+</section>
+{% endblock %}

@@ -1,0 +1,32 @@
+{# This line tells Jinja2 that this template extends the base.html template #}
+{% extends "base.html" %}
+
+{# This block defines the content that will be inserted into the 'content' block in base.html #}
+{% block content %}
+<section class="hero">
+    <h2>Quadra-Task AI Application</h2>
+    <p>This application combines four powerful AI capabilities into a single platform:</p>
+    <div class="features">
+        <div class="feature">
+            <h3>Text Summarization 🧠</h3>
+            <p>Automatically generate concise summaries of lengthy documents using state-of-the-art NLP models.</p>
+            <a href="{{ url_for('summarization') }}" class="btn">Try It</a>
+        </div>
+        <div class="feature">
+            <h3>Speech Recognition 🗣</h3>
+            <p>Convert spoken language into written text with high accuracy, supporting various audio formats.</p>
+            <a href="{{ url_for('speech_recognition') }}" class="btn">Try It</a>
+        </div>
+        <div class="feature">
+            <h3>Neural Style Transfer 🎨</h3>
+            <p>Apply artistic styles to your photographs using deep learning techniques.</p>
+            <a href="{{ url_for('style_transfer') }}" class="btn">Try It</a>
+        </div>
+        <div class="feature">
+            <h3>Text Generation ✍</h3>
+            <p>Generate coherent and contextually relevant text based on your prompts.</p>
+            <a href="{{ url_for('text_generation') }}" class="btn">Try It</a>
+        </div>
+    </div>
+</section>
+{% endblock %} {# End of the content block for index.html #}

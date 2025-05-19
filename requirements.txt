@@ -1,0 +1,13 @@
+flask==2.0.3
+werkzeug==2.0.3
+transformers==4.40.2
+torch==2.2.1
+torchvision==0.17.1
+speechrecognition==3.10.0
+pydub==0.25.1
+nltk==3.8.1
+pillow==10.1.0
+numpy==1.26.4
+tqdm==4.66.2
+flask-uploads==0.2.1
+gunicorn==21.2.0

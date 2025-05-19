@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block content %}
+<section class="text-generation">
+    <h2>Text Generation ✍</h2>
+    <form method="POST">
+        <div class="form-group">
+            <label for="prompt">Enter your prompt:</label>
+            <textarea id="prompt" name="prompt" rows="5" required>{% if prompt %}{{ prompt }}{% endif %}</textarea>
+        </div>
+        <div class="form-group">
+            <label for="length">Output length (words):</label>
+            <input type="number" id="length" name="length" min="50" max="1000" value="100">
+        </div>
+        <button type="submit" class="btn">Generate Text</button>
+    </form>
+    
+    {% if generated_text %}
+    <div class="result">
+        <h3>Generated Text:</h3>
+        <div class="generated-output">
+            {{ generated_text }}
+        </div>
+    </div>
+    {% endif %}
+</section>
+{% endblock %}
