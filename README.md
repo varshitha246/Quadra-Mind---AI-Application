@@ -1,4 +1,4 @@
-# CODTECH AI Internship - Multi-Task AI Application
+# CODTECH AI Internship - Quadra-Task AI Application
 
 This application combines four powerful AI capabilities:
 1. Text Summarization🧠
@@ -72,7 +72,7 @@ Smart AI, simple and ready to use!
 ![neural_style_transfer1](https://github.com/user-attachments/assets/8975dca1-e8e7-4355-8214-735f4f7a552d)
 ![neural_style_transfer2](https://github.com/user-attachments/assets/feb9f12e-228e-4c5d-b80f-6b93c47f3e30)
 
-4️⃣ TEXT GENERATION ✍🏻
+4️⃣ TEXT GENERATION TOOL ✍🏻
 
 ✍️ A web-based tool that generates text from user input using deep learning.
 ⚙️ Built using Flask for the front-end and Keras (LSTM model) for generation.
