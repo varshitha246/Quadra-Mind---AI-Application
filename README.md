@@ -23,7 +23,7 @@ Intern Name: KAGITHALA VARSHITHA
 Intern ID: C0DF110
 Domain: Artificial Intelligence Markup Language (AIML Internship)
 Duration: 4 Weeks
-Mentor: NEELA SANTHOSH
+Mentor: NEELA SANTHOSH KUMAR
 
 ## Welcome to Quadra-Mind! 🤖
 Harness 4 powerful AI tools in one app:
