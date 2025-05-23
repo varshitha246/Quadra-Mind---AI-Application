@@ -1,9 +1,14 @@
 # INTERNSHIP DETAILS:
 **Company:** CODTECH IT SOLUTIONS
+
 **Intern Name:** KAGITHALA VARSHITHA
+
 **Intern ID:** C0DF110
+
 **Domain:** Artificial Intelligence Markup Language (AIML Internship)
+
 **Duration:** 4 Weeks
+
 **Mentor:** NEELA SANTHOSH KUMAR
 
 # Quadra-Task AI Application
